@@ -101,6 +101,11 @@ ifeq ($(WITH_GMS),true)
 $(call inherit-product, vendor/google/gms/gms-vendor.mk)
 endif
 
+# GAPPS
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
